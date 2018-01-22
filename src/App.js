@@ -7,13 +7,21 @@ class App extends Component {
     this.state = { count: 0 };
   }
 
-  onCounterClick(type) {
-    this.setState(
-      type === 'decrement'
-        ? this.setState({ count: this.state.count - 1 })
-        : this.setState({ count: this.state.count + 1 })
-    );
+  decrementState() {
+    this.setState({ count: this.state.count - 1 });
   }
+
+  incrementState() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  // onCounterClick(type) {
+  //   this.setState(
+  //     type === 'decrement'
+  //       ? this.setState({ count: this.state.count - 1 })
+  //       : this.setState({ count: this.state.count + 1 })
+  //   );
+  // }
 
   render() {
     return (
@@ -22,13 +30,13 @@ class App extends Component {
         <div className="counters">
           <div
             className="counter_button decrement"
-            onClick={this.onCounterClick.bind(this, 'decrement')}
+            onClick={this.decrementState.bind(this)}
           >
             Decrement
           </div>
           <div
             className="counter_button increment"
-            onClick={this.onCounterClick.bind(this, 'increment')}
+            onClick={this.incrementState.bind(this)}
           >
             Increment
           </div>
