@@ -7,7 +7,7 @@ class App extends Component {
     this.state = { count: 0 };
   }
 
-  onClick(type) {
+  onCounterClick(type) {
     this.setState(
       type === 'decrement'
         ? this.setState({ count: this.state.count - 1 })
@@ -22,13 +22,13 @@ class App extends Component {
         <div className="counters">
           <div
             className="counter_button decrement"
-            onClick={this.onClick.bind(this, 'decrement')}
+            onClick={this.onCounterClick.bind(this, 'decrement')}
           >
             Decrement
           </div>
           <div
             className="counter_button increment"
-            onClick={this.onClick.bind(this, 'increment')}
+            onClick={this.onCounterClick.bind(this, 'increment')}
           >
             Increment
           </div>
