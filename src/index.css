@@ -9,9 +9,11 @@ body {
 }
 
 .counters {
+    margin: 3em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    user-select: none;
 }
 
 .counter_button {
